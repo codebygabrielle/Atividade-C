@@ -22,10 +22,10 @@ int main() {
     printf("Digite a media dos exercicios: ");
     scanf("%f", &mediaExercicios);
 
-    // Calculando a media de aproveitamento
+   
     mediaAproveitamento = (nota1 + (nota2 * 2) + (nota3 * 3) + mediaExercicios) / 7;
 
-    // Verificando o conceito
+    
     if (mediaAproveitamento >= 90) {
         conceito = 'A';
     }
@@ -42,7 +42,7 @@ int main() {
         conceito = 'E';
     }
 
-    // Mostrando os resultados
+    
     printf("\n--- RESULTADO ---\n");
     printf("Numero do aluno: %d\n", numeroAluno);
     printf("Nota 1: %.2f\n", nota1);
@@ -52,7 +52,7 @@ int main() {
     printf("Media de aproveitamento: %.2f\n", mediaAproveitamento);
     printf("Conceito obtido: %c\n", conceito);
 
-    // Verificando a situacao final
+   
     if (conceito == 'A' || conceito == 'B' || conceito == 'C') {
         printf("Situacao final: Aprovado\n");
     }
