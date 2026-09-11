@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main () {
+	char nome[50], estado_civil[10], sexo[10];
+	int tempo_casamento;
+	
+	printf("Digite seu nome: ");
+	scanf("%s", nome);
+	
+	printf("Digite seu Estado Civil(casado/solteiro): ");
+	scanf("%s", estado_civil);
+	
+	printf("Qual seu sexo (feminino/masculino): ");
+	scanf("%s", sexo);
+	
+	if(strcmp (sexo, "feminino")== 0 && strcmp(estado_civil, "casado")== 0){
+		
+	printf("Digite o tempo de casada em anos: ");
+	scanf("%d", &tempo_casamento);	
+		
+	}
+	
+	return 0;
+}
