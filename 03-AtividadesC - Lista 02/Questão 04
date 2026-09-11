@@ -1,0 +1,21 @@
+# include <stdio.h>
+
+int main (){
+    int A, B, resultado;
+    
+    printf("Digite o valor de A: ");
+    scanf("%d", &A);
+    
+    printf("Digite o valor de B: ");
+    scanf("%d", &B);
+    
+    if (A == B) {
+     resultado = A + B; 
+}else{
+    resultado = A * B;
+}
+
+printf("Resultado: %d\n", resultado);
+
+return 0;
+}
