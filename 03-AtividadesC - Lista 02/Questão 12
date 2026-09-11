@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main() {
+
+    int numeroAluno;
+    float nota1, nota2, nota3, mediaExercicios;
+    float mediaAproveitamento;
+    char conceito;
+    
+    printf("Digite o numero de identificacao do aluno: ");
+    scanf("%d", &numeroAluno);
+
+    printf("Digite a nota 1: ");
+    scanf("%f", &nota1);
+
+    printf("Digite a nota 2: ");
+    scanf("%f", &nota2);
+
+    printf("Digite a nota 3: ");
+    scanf("%f", &nota3);
+
+    printf("Digite a media dos exercicios: ");
+    scanf("%f", &mediaExercicios);
+
+    // Calculando a media de aproveitamento
+    mediaAproveitamento = (nota1 + (nota2 * 2) + (nota3 * 3) + mediaExercicios) / 7;
+
+    // Verificando o conceito
+    if (mediaAproveitamento >= 90) {
+        conceito = 'A';
+    }
+    else if (mediaAproveitamento >= 75) {
+        conceito = 'B';
+    }
+    else if (mediaAproveitamento >= 60) {
+        conceito = 'C';
+    }
+    else if (mediaAproveitamento >= 40) {
+        conceito = 'D';
+    }
+    else {
+        conceito = 'E';
+    }
+
+    // Mostrando os resultados
+    printf("\n--- RESULTADO ---\n");
+    printf("Numero do aluno: %d\n", numeroAluno);
+    printf("Nota 1: %.2f\n", nota1);
+    printf("Nota 2: %.2f\n", nota2);
+    printf("Nota 3: %.2f\n", nota3);
+    printf("Media dos exercicios: %.2f\n", mediaExercicios);
+    printf("Media de aproveitamento: %.2f\n", mediaAproveitamento);
+    printf("Conceito obtido: %c\n", conceito);
+
+    // Verificando a situacao final
+    if (conceito == 'A' || conceito == 'B' || conceito == 'C') {
+        printf("Situacao final: Aprovado\n");
+    }
+    else {
+        printf("Situacao final: Reprovado\n");
+    }
+
+    return 0;
+}
