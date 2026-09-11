@@ -2,45 +2,40 @@
 
 int main() {
 
-    float limite, velocidade;
-    float percentual;
+    float limite, velocidade, percentual;
 
-    printf("Digite a velocidade maxima permitida na via: ");
+    printf("Digite a velocidade maxima da via: ");
     scanf("%f", &limite);
 
-    printf("Digite a velocidade registrada do veiculo: ");
+    printf("Digite a velocidade do veiculo: ");
     scanf("%f", &velocidade);
-
-    printf("\n--- RESULTADO ---\n");
-    printf("Limite da via: %.2f km/h\n", limite);
-    printf("Velocidade registrada: %.2f km/h\n", velocidade);
 
     if (velocidade <= limite) {
 
-        printf("Percentual excedido: 0%%\n");
-        printf("Classificacao: Nao houve infracao.\n");
+        printf("\nNao houve infracao.\n");
 
-    }
-    else {
+    } else {
+
         percentual = ((velocidade - limite) / limite) * 100;
 
-        printf("Percentual excedido: %.2f%%\n", percentual);
-
         if (percentual <= 20) {
-            printf("Classificacao: Infracao media.\n");
-        }
+            printf("\nInfracao media.\n");
+        } 
         else if (percentual <= 50) {
-            printf("Classificacao: Infracao grave.\n");
-        }
+            printf("\nInfracao grave.\n");
+        } 
         else {
-            printf("Classificacao: Infracao gravissima.\n");
+            printf("\nInfracao gravissima.\n");
         }
 
         if (velocidade > 120) {
-            printf("ALERTA: Velocidade extremamente elevada!\n");
+            printf("Alerta: velocidade extremamente elevada!\n");
         }
+
+        printf("Limite: %.2f km/h\n", limite);
+        printf("Velocidade: %.2f km/h\n", velocidade);
+        printf("Percentual excedido: %.2f%%\n", percentual);
     }
 
     return 0;
 }
-
