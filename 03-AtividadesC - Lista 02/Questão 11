@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    float preco_produto, valor_final;
+    int codigo_condicao_pagamento;
+
+    printf("Digite o preco do produto: ");
+    scanf("%f", &preco_produto);
+
+    printf("Digite o codigo da condicao do pagamento: ");
+    scanf("%d", &codigo_condicao_pagamento);
+
+    if (codigo_condicao_pagamento == 1) {
+        valor_final = preco_produto * 0.90;
+    }
+
+    else if (codigo_condicao_pagamento == 2) {
+        valor_final = preco_produto * 0.85;
+    }
+    
+    else if (codigo_condicao_pagamento == 3) {
+        valor_final = preco_produto;
+    }
+    
+    else if (codigo_condicao_pagamento == 4) {
+        valor_final = preco_produto * 1.10;
+    }
+
+    printf("Valor final: %.2f\n", valor_final);
+
+    return 0;
+}
